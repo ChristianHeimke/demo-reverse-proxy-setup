@@ -13,6 +13,7 @@
 * Es existiert ein funktionsfähiges Docker-Image für das Backend
   * in diesem Beispiel heißt es `christianheimke/demo-backend-nodejs:001`
 * Die `docker-compose.yml` Datei enthält drei Dienste: Frontend und Backend
+* Es existiert eine VM in Azure
 
 ## Aufbau und Funktionsweise
 
@@ -120,6 +121,14 @@ server {
 
 }
 ```
+## Azure Netzwerk-Regeln
+
+* Es werden nur folgende Ports benötigt:
+  * 22 (SSH)
+  * 80 (HTTP)
+  * 443 (HTTPS)
+
+![netzwerk](data/azure_network.png)
 
 ## SSL setup
 
