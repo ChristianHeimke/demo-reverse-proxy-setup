@@ -120,3 +120,21 @@ server {
 
 }
 ```
+
+## SSL setup
+
+* certbot von let's encrypt installieren
+  `sudo apt install certbot python3-certbot-nginx`
+* certbot ausführen
+  `sudo certbot`
+* Fragen des Assistenten beantworten:
+  * E-Mail Adresse angeben
+  * Zustimmung zu den Terms of Service
+  * Teilen der E-Mail Adresse ist optional
+  * Auswahl der Domain
+  * redirect festlegen
+* nginx Konfiguration prüfen
+  `sudo nginx -t`
+* wenn alles OK ist (return code 0), nginx neustarten:
+  `sudo nginx -s reload`
+* domain aufrufen
